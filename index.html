@@ -3,22 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
 <title>Learnings from an Outing with the PTSA Laser Fleet</title>
 <meta name="description" content="Three Lasers, three sailors and one truck: the PTSA Laser fleet at the Puget Sound Sailing Championships in Seattle.">
 <meta property="og:title" content="Learnings from an Outing with the PTSA Laser Fleet">
 <meta property="og:description" content="Three Lasers, three sailors and one truck: the PTSA Laser fleet at the Puget Sound Sailing Championships in Seattle.">
 <meta property="og:image" content="images/cyc-docks.jpg">
 <meta property="og:type" content="article">
-<link rel="icon" href="images/ptsa-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ptsa-green: #1e5c34;
-    --ptsa-indigo: #4840bb;
-    --ptsa-copper: #ba7140;
-    --ptsa-gold: #c9b800;
+    --accent: #1f4e6b;
+    --accent-2: #2f6f8f;
+    --highlight: #d9a441;
     --ink: #1a1a1a;
     --muted: #5a5d63;
     --paper: #f6f6f6;
@@ -33,14 +32,21 @@
     color: var(--ink);
     font: 19px/1.65 "PT Sans", system-ui, sans-serif;
   }
-  a { color: var(--ptsa-indigo); }
+  a { color: var(--accent-2); }
 
   header.masthead {
-    background: linear-gradient(177deg, var(--ptsa-indigo) 20%, var(--ptsa-copper) 90%);
+    background: linear-gradient(177deg, #1d3a52 10%, #2f6f8f 95%);
     color: #fff;
     padding: 20px 16px 72px;
   }
   .masthead-inner { max-width: 760px; margin: 0 auto; }
+  .draft {
+    display: inline-block;
+    font: 600 12px/1.2 "Work Sans", sans-serif;
+    letter-spacing: .08em; text-transform: uppercase;
+    color: #fff; border: 1px solid rgba(255,255,255,.6);
+    border-radius: 999px; padding: 5px 10px;
+  }
   .brand {
     display: flex; align-items: center; gap: 12px;
     color: #fff; text-decoration: none;
@@ -74,12 +80,12 @@
     margin: 48px 0 12px;
     font-size: 26px;
     line-height: 1.25;
-    color: var(--ptsa-green);
+    color: var(--accent);
   }
   p { margin: 0 0 18px; }
 
   .tldr {
-    border-left: 4px solid var(--ptsa-gold);
+    border-left: 4px solid var(--highlight);
     background: #fbfaf0;
     padding: 16px 20px 4px;
     margin: 28px 0 8px;
@@ -109,7 +115,6 @@
     text-align: center; padding: 0 16px 48px;
     font: 500 13px/1.5 "Work Sans", sans-serif; color: var(--muted);
   }
-  footer img { width: 120px; display: block; margin: 0 auto 12px; }
 
   @media (max-width: 640px) {
     body { font-size: 18px; }
@@ -124,10 +129,7 @@
 
 <header class="masthead">
   <div class="masthead-inner">
-    <a class="brand" href="https://ptsail.org/">
-      <img src="images/ptsa-icon.png" alt="">
-      Port Townsend Sailing Association
-    </a>
+    <span class="draft">Draft · proposed post, not yet published</span>
     <p class="kicker">PTSA at the Puget Sound Sailing Championships, Corinthian Yacht Club of Seattle</p>
     <h1>Learnings from an Outing with the PTSA Laser Fleet</h1>
     <p class="byline">By Henry Rose</p>
@@ -231,8 +233,7 @@
 </main>
 
 <footer>
-  <a href="https://ptsail.org/"><img src="images/ptsa-logo.png" alt="Port Townsend Sailing Association"></a>
-  <a href="https://ptsail.org/">ptsail.org</a>
+  Draft proposed by Henry Rose for the Port Townsend Sailing Association. Not an official PTSA publication.
 </footer>
 
 <script>
