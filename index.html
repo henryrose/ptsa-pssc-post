@@ -173,7 +173,7 @@
   </figure>
 
   <figure>
-    <video src="images/loading-timelapse.mp4" controls muted playsinline preload="metadata"></video>
+    <video id="timelapse" src="images/loading-timelapse.mp4" controls muted loop playsinline preload="metadata"></video>
     <figcaption>The loading puzzle, sped up. <span class="credit">Video: Henry Rose</span></figcaption>
   </figure>
 
@@ -234,6 +234,20 @@
   <a href="https://ptsail.org/"><img src="images/ptsa-logo.png" alt="Port Townsend Sailing Association"></a>
   <a href="https://ptsail.org/">ptsail.org</a>
 </footer>
+
+<script>
+  // Play the timelapse while it's on screen; pause when it scrolls away.
+  (function () {
+    var v = document.getElementById('timelapse');
+    if (!v || !('IntersectionObserver' in window)) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { v.play().catch(function () {}); } else { v.pause(); }
+      });
+    }, { threshold: 0.5 }).observe(v);
+  })();
+</script>
 
 <!-- View-count analytics (GoatCounter, cookie-free) -->
 <script data-goatcounter="https://henryrose.goatcounter.com/count"
